@@ -23,7 +23,8 @@ const main = async () => {
     console.log("Contract balance:",hre.ethers.utils.formatEther(contractBalance));
 
     // second wave
-    waveTxn = await waveContract.connect(randomPerson).wave("Another message");
+    // waveTxn = await waveContract.connect(randomPerson).wave("Another message");
+    waveTxn = await waveContract.wave("Another message");
     await waveTxn.wait();
 
 
